@@ -1,0 +1,164 @@
+
+
+/////////HOME/////////////////////////////////////
+
+
+dl.accordion{
+    dd.accordion-navigation{
+
+
+        padding-bottom:10px;
+
+        .strip-side-padding{
+            padding-left:0px;
+            padding-right:0px;
+        }
+
+        ul.link-select{
+            margin-left:0;
+            & li a{
+                display: block;
+                padding: 6px 12px 6px 12px;
+                color: #404040;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                    box-shadow: 0 0 3px;
+                    color:$link-color;
+                }
+            }
+        }
+
+
+
+        & > a{ //Disable default accordion colors
+            // &:after {content: 'v';}
+            padding-bottom:0px;
+            background:none;
+            text-decoration: none;
+
+            &:hover{
+                background:none;
+                text-decoration: underline;
+            }
+        }
+
+        display:block;
+        @include linear-gradient(bottom, $primary-color, #57828B);
+        padding-bottom:10px;
+        margin-top:3px !important;
+
+        &:first-child{border-radius:6px 6px 0 0;} //radius top corners of first accordion tab
+
+        &:last-child{ //the last accordion tab
+            border-radius:0 0 6px 6px;
+            @include linear-gradient(bottom, $secondary-color, #F4336A);
+            .content{
+                border-left: solid 1px $secondary-color;
+                border-right: solid 1px $secondary-color;
+
+            }
+        }
+        .content{
+            margin-top: 10px;
+            border-left: solid 1px $primary-color;
+            border-right: solid 1px $primary-color;
+            background:white;
+
+        }   
+    }
+}
+
+
+
+.welcome{
+    // text-align: center;
+    // margin-bottom: 8px;
+    border-width:2px;
+    margin-bottom:0px;
+    & h3{color: #57828B;}
+}
+
+
+//////////////END HOME/////////////////////////////////////
+
+
+///////////DOCUMENTS///////////////////////////////
+
+.down_btn{margin:10px;}
+
+.document{
+    // margin-top:10px;
+    text-align: center;
+    clear:both;
+    margin-bottom:10px;
+    & img{border:1px lightgray solid;}
+}
+
+// .has-form{border-bottom: $secondary-color solid 1px;}
+/////////////END DOCUMENTS///////////////////////////
+
+
+
+///////////////TERMS///////////////////////////
+#glossaryNav{
+    padding:0;
+    margin-bottom: 0;
+    // overflow:hidden;
+    // & ul li a{padding:0 10px 0 10px;}
+}
+
+.glossaryContent{
+    & dd{
+     display: none;
+     border:1px lightgray solid;
+     }& dt,dd{
+        padding: 0 6px 0 6px;
+        border-radius:6px;
+    }
+}
+
+.dt-btn{
+    border:1px rgb(190, 190, 190) solid;
+    &:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+.side_container{
+    border-radius: 10px;
+    text-align: center;
+    padding-top:0;
+    padding-bottom:0;
+    width: auto;
+    
+}
+
+
+// .terms_container{@extend .container;}
+
+
+.dt-border{
+    border-bottom-right-radius:0 !important;
+    border-bottom-left-radius:0 !important;
+    border:1px gray solid !important;
+}
+.dd-border{
+    border-top-right-radius:0 !important;
+    border-top-left-radius:0 !important;
+    border:1px gray solid !important;
+    
+}
+
+////////////////////////////////////////////////////
+
+/////////////////CHECKLIST//////////////////////////
+
+table.print-table tr{
+        border-bottom: 1px $main-border-color solid;
+        display:block;
+        &:last-child{border-bottom:none;}
+}
+
+///////////////////////////////////////////////////
