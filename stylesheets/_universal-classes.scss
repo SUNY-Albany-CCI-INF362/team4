@@ -8,6 +8,26 @@
     background: -o-linear-gradient($direction, $top-color, $bottom-color);
 }
 
+* html .clearfix{
+    zoom: 1;
+} /* IE6 */
+*:first-child+html .clearfix {
+    zoom: 1;
+} /* IE7 */
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix { display: inline-table; }
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* End hide from IE-mac */
+
 .panel{
     border-radius: 6px;
     border-color:$main-border-color;
@@ -19,6 +39,7 @@
     padding-right: .6rem;
     padding-left: .6rem;
     padding-bottom: .4rem;
+    margin-bottom: 0;
     // border-color: #30A8A2;
     // margin-bottom: 0px;
     // & .menu_dropdown{padding:0px;}
@@ -31,11 +52,25 @@
     &:hover{text-decoration: underline;}
 }
 
-// ul {
-//   list-style-type: none;
-//   & li a{display: block;}
-// }
+ul{
+    margin-bottom:0;
+}
 
+p:last-child{
+    margin-bottom:0;
+}
+
+input[type*="text"]{
+    margin-bottom: 0;
+}
+
+.row.panel{
+
+    padding-top:1.25rem;
+    padding-left:0;
+    padding-right:0;
+    
+}
 
 .c1{@include border-color(#CAC9F2);}
 .c2{@include border-color(lightblue);}
